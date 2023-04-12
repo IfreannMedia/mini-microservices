@@ -13,7 +13,7 @@ app.post('/events', (req, res) => {
     // comments
     axios.post('http://localhost:4001/events', event);
     // query service
-    axios.post('http://localhost:4002/events', event);
+    //axios.post('http://localhost:4002/events', event);
 
     res.send({ status: 'ok' });
 });
