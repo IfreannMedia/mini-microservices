@@ -14,10 +14,13 @@ app.post('/events', (req, res) => {
     axios.post('http://localhost:4001/events', event);
     // query service
     axios.post('http://localhost:4002/events', event);
+    // moderation
+    
+    axios.post('http://localhost:4003/events', event);
 
     res.send({ status: 'ok' });
 });
 
 app.listen(4005, () => {
-    console.log('Listening no 4005');
+    console.log('Listening on 4005');
 })
