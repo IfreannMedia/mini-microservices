@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
         - name: posts
-          image: ifreann/posts:0.0.1
+          image: ifreann/posts:0.0.2
