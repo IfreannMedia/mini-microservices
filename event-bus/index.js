@@ -12,14 +12,14 @@ app.post('/events', (req, res) => {
 
     events.push(event);
     // posts
-    axios.post('http://localhost:4000/events', event).catch(err => console.log("error bus caught error"));
+    axios.post('http://posts-clusterip-srv:4000/events', event).catch(err => console.log("error bus caught error"));
     // comments
-    axios.post('http://localhost:4001/events', event).catch(err => console.log("error bus caught error"));
+    //axios.post('http://comments-srv:4001/events', event).catch(err => console.log("error bus caught error"));
     // query service
-    axios.post('http://localhost:4002/events', event).catch(err => console.log("error bus caught error"));
+    //axios.post('http://query-srv:4002/events', event).catch(err => console.log("error bus caught error"));
     // moderation
     
-    axios.post('http://localhost:4003/events', event).catch(err => console.log("error bus caught error"));
+    //axios.post('http://moderation-srv:4003/events', event).catch(err => console.log("error bus caught error"));
     console.log("EVENT BUS created event, returning OK, events: ", events);
     res.send({ status: 'ok' });
 });
